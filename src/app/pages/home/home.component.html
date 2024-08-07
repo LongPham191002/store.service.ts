@@ -1,0 +1,31 @@
+
+<div id="container-class">
+<div id="container">
+  <img src="assets/images/img.jpg" alt="Home Image">
+  <p>CHỌN XẾ YÊU CÙNG STORE SUPERCARCLONE</p>
+  <h1 >SẢN PHẨM TIÊU BIỂU <br>---</h1>
+  <div id="product-container">
+    @for (product of this.storeService.products; track $index) {
+      <app-product-card [routerLink]="['/product',product.id]" [product]="product"></app-product-card>
+    }
+  </div>
+</div>
+
+<!-- home.component.html -->
+
+<footer id="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 Supercar Store. All rights reserved.</p>
+    <nav class="footer-nav">
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy Policy</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+</div>
+

@@ -1,0 +1,149 @@
+$primary-color: #8fbdf4;
+$secondary-color: #50e3c2;
+$background-color: rgba(0, 0, 0, 0);
+$text-color: #333;
+$hover-color: #144dec;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$hover-shadow-color: rgba(0, 0, 0, 0.2);
+
+/* home.component.scss */
+#container-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: white;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+img {
+  width: 90vw;
+  height: 70vh;
+  display: block;
+  max-width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 0 10px $shadow-color;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px $hover-shadow-color;
+  }
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 80px);
+  padding: 50px;
+  flex-direction: column;
+  margin: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px $shadow-color;
+  background-color: $background-color;
+}
+
+#container p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  color: $text-color;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 6px $shadow-color;
+}
+
+#container h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: xxx-large;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 6px $shadow-color;
+}
+
+#product-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(900px, 3fr));
+  gap: 30px;
+  padding: 20px;
+  border: 2px solid $shadow-color;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px $shadow-color;
+  background-color: $background-color;
+}
+
+app-product-card {
+  background: $primary-color;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px $shadow-color;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px $hover-shadow-color;
+    background: $hover-color;
+  }
+}
+
+#footer {
+  width: 100%;
+  padding: 20px;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    margin: 10px 0;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .footer-social {
+    margin: 10px 0;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

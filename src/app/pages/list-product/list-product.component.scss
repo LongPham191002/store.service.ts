@@ -1,0 +1,100 @@
+$primary-color: #8fbdf4;
+$secondary-color: #50e3c2;
+$background-color: rgba(0, 0, 0, 0);
+$text-color: #333;
+$hover-color: #144dec;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$hover-shadow-color: rgba(0, 0, 0, 0.2);
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: white;
+  padding: 20px;
+  margin: 40px;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  #product-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 3fr));
+    gap: 30px;
+    padding: 20px;
+    border: 2px solid $shadow-color;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px $shadow-color;
+    background-color: $background-color;
+  }
+
+  app-product-card {
+    background: $primary-color;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px $shadow-color;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px $hover-shadow-color;
+      background: $hover-color;
+    }
+  }
+}
+
+#footer {
+  width: 300%;
+  padding: 30px;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    margin: 10px 0;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .footer-social {
+    margin: 10px 0;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

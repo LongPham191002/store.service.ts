@@ -1,0 +1,204 @@
+/* Define color variables for a cooler and more soothing palette */
+$primary-color: #4a90e2; /* Cool blue */
+$secondary-color: rgba(0, 0, 0, 0); /* Soft teal */
+$background-color: #ffffff; /* Light blue */
+$text-color: #333;
+$hover-color: #144dec; /* Soft teal */
+$shadow-color: rgba(0, 0, 0, 0.1);
+$hover-shadow-color: rgba(0, 0, 0, 0.2);
+
+/* src/app/pages/detail-product/detail-product.component.scss */
+
+#container-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: white;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: $background-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px $shadow-color;
+  max-width: 600px;
+  margin: 20px auto;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px $shadow-color;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $text-color;
+  }
+
+  p {
+    margin: 5px 0;
+    color: black;
+    font-size: 1.2em;
+
+    &:nth-of-type(1) {
+      color: black;
+      font-weight: bold;
+    }
+
+    &:nth-of-type(2) {
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+      box-shadow: 0 4px 8px $hover-shadow-color;
+    }
+  }
+}
+
+#tiltle {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 45px;
+  margin-bottom: 0px; /* Reduce the margin-bottom to bring lines closer */
+  color: $text-color;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.2; /* Adjust line-height for finer control over spacing */
+}
+
+#middle-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px $shadow-color;
+  color: $text-color;
+  font-size: 1.2em;
+  gap: 10px; /* Add gap to control spacing between child elements */
+}
+
+.middle-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px; /* Adjust margin for better spacing */
+  padding: 20px; /* Adjust padding for better spacing */
+  background-color: $secondary-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px $shadow-color;
+  color: $text-color;
+  font-size: 1.2em;
+
+  h1 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: black;
+  }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: black;
+  }
+
+  p {
+    margin: 0px 0; /* Adjust margin for better spacing */
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+#another {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: #ffffff;
+  padding: 20px; /* Add padding for consistent spacing */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  background-clip: content-box; /* Ensure background color is only applied to the content box */
+  background-color: rgba(74, 144, 226, 0.2); /* Light blue color for padding */
+}
+
+
+#footer {
+  width: 3000px;
+  padding: 20px;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    margin: 10px 0;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .footer-social {
+    margin: 10px 0;
+
+    a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

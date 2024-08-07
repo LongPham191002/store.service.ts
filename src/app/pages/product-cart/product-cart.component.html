@@ -1,0 +1,36 @@
+<div id="container">
+  <h1>Giỏ Hàng</h1>
+  @if (storeService.cart.length === 0) {
+    <p id="p1">Không có sản phẩm nào trong giỏ hàng</p>
+  }
+
+  <div id="product-container">
+  @for (product of storeService.cart;track $index){
+    <div class="cart-container">
+      <img src="{{ this.product.imageUrl }} ">
+      <p>{{ this.product.name }}</p>
+      <p>{{ this.product.quantity }}</p>
+      <p>{{ this.product.price }}</p>
+      <button (click)="storeService.deleteCart(product)">Xóa</button>
+    </div>
+  }
+  @if (this.storeService.cart.length > 0) {
+    <app-total [total]="storeService.total" ></app-total>
+  }
+</div>
+  <footer id="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Supercar Store. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+</div>
+

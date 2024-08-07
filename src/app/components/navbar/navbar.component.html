@@ -1,0 +1,12 @@
+<div id="container">
+  <nav id="navbar">
+    <h1>SupercarClone</h1>
+  </nav>
+  <button [routerLink]="['/home']">Home</button>
+  <button [routerLink]="['/products']">Products</button>
+  <button [routerLink]="['/cart']">Cart</button>
+  <button (click)="authService.login()">Login with Google</button>
+  <button (click)="authService.logout()">Logout</button>
+  @if(authService.currentUser){<img [src]="authService.currentUser.photoURL" alt="" >}
+</div>
+
